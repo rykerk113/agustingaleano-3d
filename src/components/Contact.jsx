@@ -130,7 +130,7 @@ const Contact = () => {
             {/* PDF Download */}
             <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 shadow-lg">
               <a 
-                href="https://drive.google.com/file/d/1EU6d1q8OB-ZXS4e3tGFE4QI9CZyqEMhy/view?usp=sharing"
+                href="https://drive.google.com/file/d/1H5y-Vo14JKdXonScm0hxnFJ7FxtKKWMK/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-full p-4 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 rounded-xl transition-all duration-300 transform hover:scale-105 group"
