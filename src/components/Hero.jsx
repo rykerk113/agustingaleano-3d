@@ -44,7 +44,7 @@ const Hero = () => {
           {/* Main RYKER Title */}
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-black mb-6 relative">
             <span className="text-white">
-              RYKER
+              GALEANO AGUSTIN
             </span>
           </h1>
           
