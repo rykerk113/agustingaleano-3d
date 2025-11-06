@@ -95,7 +95,7 @@ const Footer = () => {
             </div>
             
             <div className="text-gray-400 text-center md:text-right">
-              <p>© 2025 Ryker. All rights reserved.</p>
+              <p>© 2025 AGUSTIN GALEANO. All rights reserved.</p>
               <p className="text-sm mt-1">
                 Creating models and rigs with 
                 <span className="text-orange-500 font-semibold"> life and quality</span>
