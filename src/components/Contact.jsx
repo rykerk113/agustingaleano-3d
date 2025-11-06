@@ -98,8 +98,7 @@ const Contact = () => {
                 Get In Touch
               </h3>
               <p className="text-gray-300 mb-8 text-lg leading-relaxed">
-                Ready to bring your project to life with high-quality 3D models and rigs? 
-                Let's work together to create something amazing.
+                I design 3D models and build rigs ready for production.
               </p>
             </div>
 
