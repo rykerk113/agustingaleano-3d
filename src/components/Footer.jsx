@@ -29,7 +29,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
               <div className="text-3xl font-black text-white">
-                RYKER
+                AGUSTIN GALEANO
               </div>
               <Sparkles className="w-6 h-6 text-orange-500 ml-2 animate-pulse" />
             </div>
