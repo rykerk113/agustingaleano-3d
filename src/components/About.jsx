@@ -118,7 +118,7 @@ const About = () => {
           <div className="relative">
             <div className="relative w-full h-96 rounded-3xl overflow-hidden border border-gray-700/50 shadow-xl">
               <iframe
-                src="https://youtu.be/jlvqN1-zrnc?si=QOqG6oZTdMLkyGO7"
+                src="https://youtu.be/jlvqN1-zrnc?si=_-jwg943sUXhcNyR"
                 title="3D Modeling Showcase"
                 className="w-full h-full"
                 frameBorder="0"
