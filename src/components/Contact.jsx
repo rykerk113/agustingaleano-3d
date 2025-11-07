@@ -23,13 +23,34 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    alert('Message sent successfully! I\'ll get back to you within 24 hours.');
-    setFormData({ name: '', email: '', subject: '', message: '', projectType: '' });
-    setIsSubmitting(false);
+
+    try {
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+      const response = await fetch(`${supabaseUrl}/functions/v1/send-contact-email`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${supabaseAnonKey}`,
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
+      alert('Message sent successfully! I\'ll get back to you within 24 hours.');
+      setFormData({ name: '', email: '', subject: '', message: '', projectType: '' });
+    } catch (error) {
+      console.error('Error sending message:', error);
+      alert('Failed to send message. Please try again or contact me directly at rykerk113@gmail.com');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const projectTypes = [
@@ -98,7 +119,8 @@ const Contact = () => {
                 Get In Touch
               </h3>
               <p className="text-gray-300 mb-8 text-lg leading-relaxed">
-                I design 3D models and build rigs ready for production.
+                Ready to bring your project to life with high-quality 3D models and rigs? 
+                Let's work together to create something amazing.
               </p>
             </div>
 
@@ -129,7 +151,7 @@ const Contact = () => {
             {/* PDF Download */}
             <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 shadow-lg">
               <a 
-                href="https://drive.google.com/file/d/1H5y-Vo14JKdXonScm0hxnFJ7FxtKKWMK/view?usp=sharing"
+                href="https://drive.google.com/file/d/1EU6d1q8OB-ZXS4e3tGFE4QI9CZyqEMhy/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-full p-4 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 rounded-xl transition-all duration-300 transform hover:scale-105 group"
